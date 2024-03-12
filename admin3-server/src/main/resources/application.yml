@@ -11,9 +11,9 @@ spring:
     name: admin3
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/admin3?characterEncoding=utf8
-    username: root
-    password: 123456
+    url: ${SPRING_DATABASE_URL:jdbc:mysql://127.0.0.1:3306/admin3?characterEncoding=utf8}
+    username: ${SPRING_DATABASE_USERNAME:root}
+    password: ${SPRING_DATABASE_PASSWORD:123456}
   sql:
     init:
       encoding: utf8
